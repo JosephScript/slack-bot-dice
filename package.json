@@ -1,0 +1,35 @@
+{
+  "name": "dice",
+  "version": "1.0.0",
+  "description": "Rolls dice, plain and simple. Use the '/roll ndX+Y' command, where n is the number of the die, X is the number of sides, and Y is the number you want to add to it.",
+  "keywords": [
+    "Slack",
+    "bot",
+    "gaming",
+    "dice"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NukaPunk/slack-bot-dice"
+  },
+  "main": "lib/dicebot.js",
+  "bin": {
+    "dicebot": "bin/bot.js"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node bin/bot.js"
+  },
+  "author": {
+    "name": "Joseph Szczesniak",
+    "email": "nukapunk@gmail.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.12.1"
+  },
+  "dependencies": {
+    "debug": "~2.2.0",
+    "slackbots": "^0.4.0"
+  }
+}
