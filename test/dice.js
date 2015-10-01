@@ -155,7 +155,11 @@ describe("Dice Roller", function () {
             expect(value.total).to.be.at.least(4);
             expect(value.total).to.be.at.most(42);
         });
-
+        it("human input", function(){
+            var value = dice.roll("Roll 6d6+6 for damage");
+            expect(value.total).to.be.at.least(12);
+            expect(value.total).to.be.at.most(42);
+        })
     });
     describe("Parsing", function () {
         it("Parses without a prefix", function () {
