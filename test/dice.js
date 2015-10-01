@@ -159,7 +159,12 @@ describe("Dice Roller", function () {
             var value = dice.roll("Roll 6d6+6 for damage");
             expect(value.total).to.be.at.least(12);
             expect(value.total).to.be.at.most(42);
+        });
+        it("zero sided dice", function(){
+            var value = dice.roll("Roll 6d0");
+            expect(value.total).to.equal(0);
         })
+
     });
     describe("Parsing", function () {
         it("Parses without a prefix", function () {
