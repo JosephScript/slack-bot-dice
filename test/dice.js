@@ -145,6 +145,17 @@ describe("Dice Roller", function () {
             expect(value).to.be.at.least(3);
             expect(value).to.be.at.most(13);
         });
+        it("Should be between 3 and 13", function () {
+            var value = dice.roll('1 d 6 + 1 d 4 + 1 d 3');
+            expect(value).to.be.at.least(3);
+            expect(value).to.be.at.most(13);
+        });
+        it("Should be between 3 and 13", function () {
+            var value = dice.roll("1d20+1d20+2");
+            expect(value).to.be.at.least(4);
+            expect(value).to.be.at.most(42);
+        });
+
     });
     describe("Parsing", function () {
         it("Parses without a prefix", function () {
